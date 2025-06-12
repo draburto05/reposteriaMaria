@@ -1,0 +1,3 @@
+Esta rama tiene la secuencia main>Acerca-de-nosotros>Marcos. Creada para las modificaciones
+de diseño de la página about us y para interactuar con decisiones de otros compañeros.
+Aquí yo Marcos Garnica, trabajaré antes de mezclar con la rama madre (Acerca-de-nosotros). 
