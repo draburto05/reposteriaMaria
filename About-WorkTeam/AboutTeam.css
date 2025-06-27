@@ -54,14 +54,14 @@ section .section-title {
 }
 
 .mainflip {
-    -webkit-transition: 1s;
+    -webkit-transition: 3s;
     -webkit-transform-style: preserve-3d;
-    -ms-transition: 1s;
-    -moz-transition: 1s;
+    -ms-transition: 3s;
+    -moz-transition: 3s;
     -moz-transform: perspective(1000px);
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
-    transition: 1s;
+    transition: 3s;
     transform-style: preserve-3d;
     position: relative;
 }
@@ -95,15 +95,15 @@ section .section-title {
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transition: 1s;
+    -webkit-transition: 3s;
     -webkit-transform-style: preserve-3d;
-    -moz-transition: 1s;
+    -moz-transition: 3s;
     -moz-transform-style: preserve-3d;
-    -o-transition: 1s;
+    -o-transition: 3s;
     -o-transform-style: preserve-3d;
-    -ms-transition: 1s;
+    -ms-transition: 3s;
     -ms-transform-style: preserve-3d;
-    transition: 1s;
+    transition: 3s;
     transform-style: preserve-3d;
 }
 
