@@ -28,12 +28,10 @@
     vertical-align: middle;
     width: 120px;
     height: 60px;
-
 }
 
 .logo {
     width: 100px;
-
 }
 
 .btn-primary:hover,
@@ -48,6 +46,11 @@
     color: #fff;
     background-color: #007b5e;
     border-color: #007b5e;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #421f52;
+  color: #fff;
 }
 
 
