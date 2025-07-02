@@ -1,0 +1,1 @@
+En esta rama se trabaja la página de about us por Marcos Garnica. Marcos Garnica creará una rama nueva dentro de está rama para tener modificaciones y comentarios, asi como cualquier otro integrante del equipo. Una de acuerdo con el diseño se mezclará con develop y después con main.

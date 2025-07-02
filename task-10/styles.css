@@ -1,0 +1,61 @@
+/* Fondo oscuro y fuente Montserrat */
+body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.my-5 {
+    text-align: center;
+    color: #e5cee1;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-shadow: black 5px 3px;
+}
+
+
+label {
+    color: #e5cee1;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: #054646;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.form-control {
+    background-color: #e5cee1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(229, 206, 225, 0.8);
+}
+
+/* Botón principal */
+.btn-block {
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+    background-color: #e5cee1;
+    color: #035e5f;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-block:hover {
+    background-color: #bc9dc8;
+    transform: scale(1.02);
+}
