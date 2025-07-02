@@ -1,0 +1,91 @@
+
+     
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #f8f9fa;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          min-height: 100vh;
+      }
+
+      #contacto {
+          background-color: white;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          max-width: 800px;
+          margin: 30px 0;
+      }
+
+      #contacto h1 {
+          color: #2c3e50;
+          font-weight: 700;
+          margin-bottom: 25px;
+          text-align: center;
+      }
+
+      .form-row {
+          margin-bottom: 20px;
+      }
+      .form-control {
+          border-radius: 5px;
+          padding: 10px;
+      }
+
+      .form-control:focus {
+          border-color: #86b7fe;
+          box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      }
+
+      .input-group-text {
+          background-color: #e9ecef;
+      }
+
+      #floatingTextarea2 {
+          min-height: 120px;
+      }
+
+      #btnSend {
+          background-color: #20c997 !important;
+          border: none;
+          color: white;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          border-radius: 5px !important;
+          width: 120px !important;
+          height: 50px !important;
+          display: block;
+          margin: 0 auto;
+      }
+
+      #btnSend:hover {
+          background-color: #1aa179 !important;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .valid-tooltip, .invalid-tooltip {
+          font-size: 0.85rem;
+      }
+
+      @media (max-width: 768px) {
+          body {
+              padding: 15px;
+          }
+          
+          #contacto {
+              padding: 20px;
+          }
+          
+          .col-md-5, .col-md-6, .col-md-4, .col-md-10 {
+              width: 100% !important;
+              max-width: 100% !important;
+              flex: 0 0 100% !important;
+          }
+          
+          .form-row {
+              flex-direction: column;
+          }
+      }

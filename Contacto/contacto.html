@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+   <link rel="stylesheet" href="contacto.css">
+  </head>
+  <body>
+    <form id="contacto" novalidate>
+      <h1>Contacto</h1>
+      
+      <div class="row form-row">
+        <div class="col-md-5 mb-3">
+          <label for="validationName" class="form-label">Nombre(s):</label>
+          <input type="text" class="form-control" id="validationName" placeholder="Nombre" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-5 mb-3">
+          <label for="validationLastName" class="form-label">Apellido(s):</label>
+          <input type="text" class="form-control" id="validationLastName" placeholder="Apellido" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+      </div>
+      
+      <div class="row form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationEmail" class="form-label">Email:</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+            <input type="email" class="form-control" id="validationEmail" placeholder="test@example.com" required>
+            <div class="invalid-tooltip">
+              Ingresa un correo valido.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationPhone" class="form-label">Teléfono:</label>
+          <input type="tel" class="form-control" id="validationPhone" placeholder="Teléfono" required>
+          <div class="invalid-tooltip">
+            Por favor ingresa un teléfono valido.
+          </div>
+        </div>
+      </div>
+      
+      <div class="row form-row">
+        <div class="col-md-10 mb-3">
+          <div class="form-floating">
+            <textarea class="form-control"  id="floatingTextarea2"></textarea>
+            <label for="floatingTextarea2">Comentarios</label>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="col-md-10 mx-auto">
+      
+      <div class="row">
+        <div class="col-md-12">
+          <button id="btnSend" type="submit">Enviar</button>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="contacto.js"></script>
+  </body>
+</html>
