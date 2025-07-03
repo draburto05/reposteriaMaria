@@ -49,6 +49,8 @@
 
 }
 
+
+
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: #5c5c5c;
@@ -306,6 +308,11 @@ section .section-title {
 
 
 
+
+
+
+
+
 /*-------------------------------Estilos de la pagina de inicio----------------------------------*/
 * {
   margin: 0;
@@ -444,10 +451,6 @@ footer {
   font-size: 24px;
   color: #333;
   margin: 0 10px;
-}
-.container img{
-    width: 10%;
-    height: 15%;
 }
 
 /*-------------------------------Estilos de la pagina de inicio----------------------------------*/
