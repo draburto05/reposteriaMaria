@@ -7,26 +7,39 @@
 }
 
 /* Aqui empieza la seccion navbar */
+.container-fluid{
+    background-color: #EADEEA;
+    border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.nav-pills .nav-link {
-  color: #2c3e50;
+} 
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+   
+}
+
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;;
+  color: #060708;
   font-weight: 600;
-  font-size: 1.1rem;
-  padding: 10px 15px;
-  margin: 0 5px;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  margin: 0 10px;
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s;
+ 
+  
 }
 
-.nav-pills .nav-link:hover,
-.nav-pills .nav-link:focus {
-  background-color: #421f52;
-  color: #fff;
-}
 .navbar-logo img {
     display: inline-block;
     vertical-align: middle;
-    width: 120px;
+    width: 100px;
     height: 60px;
 
 }
@@ -277,7 +290,8 @@ section .section-title {
 }
 
 .mi-footer {
-    background-color: rgb(248, 247, 248);
+    margin-top: 10px;
+    background-color: #EADEEA;
     text-align: center;
     font-size: 1.3rem;
     font-family: "Montserrat", sans-serif;;
