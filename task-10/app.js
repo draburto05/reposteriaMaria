@@ -74,7 +74,19 @@ newItemForm.addEventListener('submit', (event) => {
 
     // Add the item to the ItemsController
     itemsController.addItem(name, flavour, description, price, imageUrl);
+    
+    //create objet 
+     const nuevoProducto = {
+     nombre: name,
+     sabor: flavour,
+     descripcion: description,
+     precio: price,
+     imagen: imageUrl
+    };
 
+    console.log(JSON.stringify(nuevoProducto));
+
+    
     // Clear the form
     newItemForm.reset();
     mostrarAlerta(["Producto guardado con éxito ✅"], "success");
@@ -96,3 +108,13 @@ function mostrarAlerta(mensajes, tipo = "danger") {
     </div>
   `;
 }
+
+//animation 
+lottie.loadAnimation({
+  container: document.getElementById('lottie-container'),
+  renderer: 'svg',
+  loop: true,  //si esta en true se repite  una y otra vez sin detenerse
+  autoplay: true,  // comienza la animacion al cargar la pagina 
+  path: 'animations/bakery.json' // Ruta al archivo Json
+});
+

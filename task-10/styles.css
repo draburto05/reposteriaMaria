@@ -59,3 +59,17 @@ label {
     background-color: #bc9dc8;
     transform: scale(1.02);
 }
+
+/*Animation*/
+#lottie-container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  #lottie-container {
+    max-width: 300px;
+  }
+}
