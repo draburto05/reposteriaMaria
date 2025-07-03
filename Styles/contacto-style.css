@@ -32,17 +32,26 @@ form#contacto label {
 }
 
 .form-control {
+  background-color: rgb(188, 157, 200); /* color moradito claro */
+  color: #333; /* texto oscuro para buen contraste */
   border: 2px solid rgb(188, 157, 200);
   border-radius: 8px;
   padding: 10px 12px;
   transition: border-color 0.3s ease;
 }
 
+.form-control::placeholder {
+  color: rgba(51, 51, 51, 0.7); /* placeholder con tono más tenue */
+}
+
 .form-control:focus {
+  background-color: white; /* opcional: cambia a blanco al enfocar */
   border-color: rgb(3, 94, 95);
   box-shadow: 0 0 6px rgb(3, 94, 95);
+  color: #000; /* texto negro para enfoque */
   outline: none;
 }
+
 
 .input-group-text {
   background-color: rgb(188, 157, 200);
@@ -170,6 +179,28 @@ hr {
   .contact-info {
     width: 100%;
     margin-top: 30px;
+  }
+}
+
+.logo-bottom {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 120px; 
+  width: auto;
+  opacity: 0.9;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+  border-radius: 10px; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  mix-blend-mode: multiply; 
+  pointer-events: none; 
+}
+@media (max-width: 600px) {
+  .logo-bottom {
+    height: 80px;
+    bottom: 10px;
+    right: 10px;
   }
 }
 
