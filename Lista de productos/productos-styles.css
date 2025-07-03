@@ -1,0 +1,53 @@
+.tooltip-text {
+      visibility: hidden;
+      width: 220px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: left;
+      padding: 10px;
+      border-radius: 6px;
+opacity: 0;
+      /* Posición */
+      position: relative;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+}
+.tooltip-trigger{
+      position: relative;
+      cursor: pointer;
+
+}
+
+.tooltip-trigger:hover  .tooltip-text{
+      visibility: visible;
+      opacity: 1;
+}
+
+.cartas {
+      margin: 10px;
+      transition: transform 0.2s;
+      width: 300px;
+      height: 250px;
+      
+      padding: 20px;
+      font-family: montserrat;
+}
+.card-img{
+      height: 165px;
+}
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+}
+
+.boton{
+      height: 20px;
+      font-size: 10px;
+      
+}

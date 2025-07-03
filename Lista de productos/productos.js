@@ -56,13 +56,14 @@ function borrarLista() {
 // Renderizar productos
 const renderProductos = (producto) => {
   const cardProducto = `
-    <div class="card m-2" style="width: 18rem;">
-      <img src="${producto.imagen || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${producto.descripcion || 'Imagen del producto'}">
-      <div class="card-body">
+    <div class="cartas m-2" style="width: 18rem;">
+      <img src="${producto.imagen || 'Productos/258107.jpg'}" class="card-img-top card-img" alt="${producto.descripcion || 'Imagen del producto'}">
+      <div class="card-body tooltip-trigger">
         <h5 class="card-title">${producto.nombre}</h5>
         <p class="card-text">$${producto.precio}</p>
-        <p class="card-text">${producto.descripcion}</p>
-        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+        
+        <a href="#" class="btn btn-primary boton">Agregar al carrito</a>
+        <p class="card-text tooltip-text">${producto.descripcion}</p>
       </div>
     </div>
   `;
