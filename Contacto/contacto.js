@@ -1,10 +1,4 @@
-
-
-
-// Incluye el script de EmailJS en tu HTML antes de usarlo
-// <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 emailjs.init({ publicKey: "oiBY7QlJnAHEZrQkx" });
- // Reemplaza con tu User ID de EmailJS
 
 document.querySelector('#contacto').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -15,10 +9,9 @@ document.querySelector('#contacto').addEventListener('submit', function(event) {
     const tel = document.querySelector('#validationPhone').value;
     const coment = document.querySelector('#AreaComent').value;
 
-     const serviceID = "service_gj73m43"; // Reemplaza con tu Service ID
+     const serviceID = "service_gj73m43"; 
   const templateID = "template_zxuohuk";
 
-  // Enviar los datos usando EmailJS
   emailjs.send('service_gj73m43', 'template_zxuohuk',{
     nombre: name,
     apellido:lastName, 
