@@ -13,32 +13,13 @@
 </head>
 
 <body>
-
-    <!-- Barra de navegacion -->
-    <nav class="navbar fixed-top navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-logo" href="">
-                <img id="logo" src="Fotos/logo.png" class="redes">
-            </a>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="#cont-hist">Historia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#team">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#equipo">Equipo</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-
+<<<<<<< HEAD
+   <div id="nav-placeholder"></div>
+=======
+<div id="nav-placeholder"></div>
+>>>>>>> Luis
 <br>
 <br>
-
 
  <!--Historia de Reposteria-->
            <div class="contenedor-historia col-12" id="cont-hist">
@@ -387,11 +368,14 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
                    
 
 
 
 
+>>>>>>> Luis
                   <!-- Miembro 7-->
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
@@ -498,7 +482,7 @@
                                 <div class="frontside">
                                     <div class="card">
                                         <div class="card-body text-center">
-                                            <p><img class="img-fluid img-card" src="Fotos/luis.jpg" alt="card image">
+                                            <p><img class="img-fluid img-card" src="Fotos/luis.png" alt="card image">
                                             </p>
                                             <h4 class="card-title">Luis Enrique Escamilla Lucero</h4>
                                             <p class="card-text">Desarrollador Java Full Stack.</p>
@@ -541,42 +525,49 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> Luis
                 </div>
                 
             </div>
             </section>
+<<<<<<< HEAD
+    </div>
+ <div id="footer-placeholder"></div>
+=======
             
 
         <!-- Footer-->
-        <footer class="mi-footer  py-3">
-            <div class="container">
-                <div class="d-flex justify-content-center mb-3">
-                    <a href=mailto:"mariaantonietareposteria2015@gmail.com" target="_blank" class="mx-3">
-                        <img src="Fotos/gmail.png" alt="Gmail" class="icono-red redes">
-                    </a>
-                    <a href="https://www.facebook.com/maria.antonieta.01" target="_blank" class="mx-3">
-                        <img src="Fotos/145802.png" alt="facebook" class="icono-red redes">
-                    </a>
-                    <a href="https://www.instagram.com/maria.antonieta.reposteria/" target="_blank" class="mx-3">
-                        <img  src="Fotos/instagram.png" alt="Instagram" class="icono-red redes">
-                    </a>
-                </div>
+         </div>
 
-                <p class="mb-0">Error capa 8 - Generation Mexico</p>
-                <p class="mb-1">© 2025 Repostería Maria Antonieta. Todos los derechos reservados. </p>
+     <div id="footer-placeholder"></div>
+  </section>
 
-            </div>
-           <svg id="ir-arriba" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/></svg>
-        </footer>
-    </div>
+>>>>>>> Luis
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("../componentes/header.html")
+      .then(res => res.text())
+      .then(data => {
+        const navContainer = document.getElementById("nav-placeholder");
+        if (navContainer) navContainer.innerHTML = data;
+      });
 <<<<<<< HEAD
 =======
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-<script src="AboutTeam.js"></script>
->>>>>>> main
+
+    fetch("../componentes/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        const footerContainer = document.getElementById("footer-placeholder");
+        if (footerContainer) footerContainer.innerHTML = data;
+      });
+  });
+</script>
+
 </body>
 <!-- jQuery primero (versión compatible con Bootstrap 4) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -586,5 +577,15 @@
 
 <!-- Bootstrap 4 JS completo -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script
+>>>>>>> Luis
 
+    fetch("../componentes/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        const footerContainer = document.getElementById("footer-placeholder");
+        if (footerContainer) footerContainer.innerHTML = data;
+      });
+  });
+</script>
+</body>
 </html>

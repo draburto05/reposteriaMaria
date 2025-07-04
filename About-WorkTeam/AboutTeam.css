@@ -1,6 +1,8 @@
-/*fuente Montserrat correspondiente a la guia de diseño*/
+
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+
 
 * {
     font-family: "Montserrat", sans-serif;
@@ -31,6 +33,8 @@
 .logo {
     width: 100px;
 }
+
+
 
 .btn-primary:hover,
 .btn-primary:focus {
@@ -147,18 +151,18 @@
     /*Scroll si el contenido es muy largo */
 }
 
-section {
+.section {
     padding: 60px 0;
 }
 
-section .section-title {
+.section .section-title {
     text-align: center;
     color: #421f52;
     margin-bottom: 2rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;;
+    font-family: "Montserrat", sans-serif;
     size-adjust: center;
 }
 
@@ -274,13 +278,6 @@ section .section-title {
     transition: 0.3s;
 }
 
-.mi-footer {
-    background-color: rgb(248, 247, 248);
-    text-align: center;
-    font-size: 1.3rem;
-    font-family: "Montserrat", sans-serif;;
-    color: #421f52;
-}
 
 .icono-red {
     width: 40px;
@@ -304,3 +301,12 @@ section .section-title {
     align-items: center;
     justify-content: center;
 }
+
+
+
+
+
+
+
+
+
