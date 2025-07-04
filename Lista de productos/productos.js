@@ -2,7 +2,7 @@ const mainContainer = document.querySelector(".container");
 
 // Lista inicial con 10 objetos de muestra
 let productosReposteria = [
-  { id: 1, nombre: "Pastel de chocolate", imagen: "", precio: 300, descripcion: "Delicioso pastel de chocolate", disponible: true },
+  { id: 1, nombre: "Pastel de chocolate", imagen: "img/Productos/Pastel_de_chocolate.jpg", precio: 300, descripcion: "Delicioso pastel de chocolate", disponible: true },
   { id: 2, nombre: "Cheesecake", imagen: "", precio: 250, descripcion: "Clásico cheesecake", disponible: true },
   { id: 3, nombre: "Tarta de manzana", imagen: "", precio: 260, descripcion: "Tarta fresca de manzana", disponible: true },
   { id: 4, nombre: "Cupcakes", imagen: "", precio: 120, descripcion: "Coloridos cupcakes", disponible: true },
@@ -56,15 +56,20 @@ function borrarLista() {
 // Renderizar productos
 const renderProductos = (producto) => {
   const cardProducto = `
-    <div class="cartas m-2" style="width: 18rem;">
-      <img src="${producto.imagen || 'Productos/258107.jpg'}" class="card-img-top card-img" alt="${producto.descripcion || 'Imagen del producto'}">
+    <div class="cartas m-2 tooltip-trigger" style="width: 18rem;">
+    
+      <img src="${producto.imagen || 'Productos/258107.jpg'}" class="card-img-top card-img tooltip-trigger" alt="${producto.descripcion || 'Imagen del producto'}">
+      <h5 class="card-title">${producto.nombre}</h5>
       <div class="card-body tooltip-trigger">
-        <h5 class="card-title">${producto.nombre}</h5>
-        <p class="card-text">$${producto.precio}</p>
         
-        <a href="#" class="btn btn-primary boton">Agregar al carrito</a>
-        <p class="card-text tooltip-text">${producto.descripcion}</p>
+        <p class="card-text">$${producto.precio}</p> <div class="tooltip-trigger"><p class="card-text tooltip-text">${producto.descripcion}</p></div>
+    
       </div>
+      
+      <button class="add">+</button><button class="add">-</button>
+        <a href="#"> <button class = "boton">Agregar al carrito</button></a>
+        
+          
     </div>
   `;
   mainContainer.insertAdjacentHTML("beforeend", cardProducto);
