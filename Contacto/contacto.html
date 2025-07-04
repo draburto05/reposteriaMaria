@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   </head>
   <body>
+    <div id="nav-placeholder"></div>
     <div class="contact-container">
       <aside class="contact-info">
         <h2>Contacto</h2>
@@ -27,14 +28,14 @@
     <form id="contacto" novalidate>
     
       <div class="row form-row">
-        <div class="col-md-5 mb-3">
+        <div class="col-12 col-md-5 mb-3">
           <label for="validationName" class="form-label">Nombre(s):</label>
           <input type="text" class="form-control" id="validationName"  placeholder="Nombre" required>
           <div class="valid-tooltip">
             Looks good!
           </div>
         </div>
-        <div class="col-md-5 mb-3">
+        <div class="col-12 col-md-5 mb-3">
           <label for="validationLastName" class="form-label">Apellido(s):</label>
           <input type="text" class="form-control" id="validationLastName" placeholder="Apellido" required>
           <div class="valid-tooltip">
@@ -44,7 +45,7 @@
       </div>
       
       <div class="row form-row">
-        <div class="col-md-6 mb-3">
+        <div class="col-12 col-md-5 mb-3">
           <label for="validationEmail" class="form-label">Email:</label>
           <div class="input-group has-validation">
             <span class="input-group-text">@</span>
@@ -54,7 +55,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-12 col-md-5 mb-3">
           <label for="validationPhone" class="form-label">Teléfono:</label>
           <input type="tel" class="form-control" id="validationPhone" placeholder="Teléfono" required>
           <div class="invalid-tooltip">
@@ -64,7 +65,7 @@
       </div>
       
       <div class="row form-row">
-        <div class="col-md-10 mb-3">
+        <div class="col-12 col-md-10 mb-3">
           <div class="form-floating">
             <textarea class="form-control"  id="AreaComent"></textarea>
             <label for="AreaComent">Comentarios</label>
@@ -82,6 +83,9 @@
     </form>
     <img src="img/fondo-maria.png" alt="Logo María Antonia" class="logo-bottom">
     </div>
+<div id="footer-placeholder"></div>
+  </body>
+    
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -94,5 +98,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="contacto.js"></script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("../componentes/header.html")
+      .then(res => res.text())
+      .then(data => {
+        const navContainer = document.getElementById("nav-placeholder");
+        if (navContainer) navContainer.innerHTML = data;
+      });
+
+    fetch("../componentes/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        const footerContainer = document.getElementById("footer-placeholder");
+        if (footerContainer) footerContainer.innerHTML = data;
+      });
+  });
+</script>
     
 </html>
