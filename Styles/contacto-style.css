@@ -19,14 +19,22 @@ body {
   padding-bottom: 0; /* *agregue un padding bottom de 0 para que el footer este pegado al final de la pagina */
 }
 
+/* Evitar overflow horizontal */
+body, html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .contact-container {
   display: flex;
+  flex-wrap: nowrap; /* inicialmente sin wrap para que queden lado a lado */
   gap: 40px;
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
   padding: 30px 15px;
   justify-content: center;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 /* -----------------------
@@ -41,8 +49,13 @@ form#contacto {
   box-shadow: 0 6px 18px rgba(132, 114, 162, 0.3);
   padding: 30px 40px;
   max-width: 600px;
-  width: 100%;
+  min-width: 280px;
+  width: 50vw; ;
   color: #333;
+  max-width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  box-sizing: border-box;
 }
 
 form#contacto h1 {
@@ -143,6 +156,7 @@ hr {
   box-shadow: 0 6px 18px rgba(132, 114, 162, 0.3);
   padding: 30px 40px;
   width: 320px;
+  min-width: 280px;
   color: rgb(132, 114, 162);
   font-weight: 600;
   font-size: 1.1rem;
@@ -171,12 +185,14 @@ hr {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  width: 500px;
+  width: 250px;;
   opacity: 0.8;
   pointer-events: none;
   z-index: 0;
-  max-width: 90%;
+  max-width: 60%;
   height: auto;
+  transition: width 0.3s ease;
+  user-select: none;
 }
 
 /* -----------------------
@@ -185,12 +201,16 @@ hr {
 @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;
-    padding: 15px;
+    align-items: center;
+    padding: 10px;
+    max-width: 100%;
+    gap: 30px;
   }
 
   .contact-info {
     width: 100%;
     margin-top: 30px;
+    padding: 20px;
   }
 }
 
@@ -207,6 +227,7 @@ hr {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    display: flex;
   }
 
   .col-md-5,
@@ -224,7 +245,7 @@ hr {
   }
 
   .logo-bottom {
-    width: 250px;
+    width: 200px;
     bottom: 5px;
     right: 5px;
   }
@@ -232,13 +253,17 @@ hr {
 
 @media (max-width: 480px) {
   .logo-bottom {
-    width: 180px;
+    width: 150px; /* un poco más pequeño */
+    bottom: 5px;
+    right: 5px;
   }
 }
 
 @media (max-width: 400px) {
   form#contacto {
-    padding: 20px 15px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .form-control,
@@ -256,4 +281,35 @@ hr {
   }
 }
 
+/* Forzar que las columnas usen 100% ancho en móviles muy pequeños */
+@media (max-width: 375px) {
+  .col-12, .col-md-5, .col-md-10, .col-md-12 {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+   .logo-bottom {
+    width: 150px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px 15px;
+  }
+    .contact-info,
+  form#contacto {
+    width: 100% !important;
+    min-width: auto;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
