@@ -1,12 +1,14 @@
+/* FOOTER */
 .mi-footer {
   background-color: #e6d2ec;
   padding: 20px 0;
-  margin-top: 20px;
-
-    text-align: center;
-    font-size: 1.3rem;
-    font-family: "Montserrat", sans-serif;;
-    color: #421f52;
+  margin-top: 4rem;
+  width: 100vw; /* *Agregue un ancho de 100vw para que forzara al footer ocupar todo el ancho de la pagina. */
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;;
+  color: #421f52;
+  
  
 }
 .logo-footer {
@@ -21,11 +23,11 @@
 }
 
 
+
+/* HEADER */
 .container-fluid{
    background-color: #e6d2ec;
 }
-
-
 
 .nav-pills .nav-link {
  

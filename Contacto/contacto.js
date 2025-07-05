@@ -26,3 +26,20 @@ document.querySelector('#contacto').addEventListener('submit', function(event) {
   });
 });
 
+//Aqui empieza el script para incluir el header y el footer directamente en el html de la pagina contacto.
+function includeHTML() {
+  const elements = document.querySelectorAll('[data-include]');
+  elements.forEach(async (el) => {
+    const file = el.getAttribute('data-include');
+    try {
+      const response = await fetch(file);
+      if (!response.ok) throw new Error(`Error al cargar ${file}`);
+      const html = await response.text();
+      el.innerHTML = html;
+    } catch (err) {
+      el.innerHTML = `<p style="color:red;">${err.message}</p>`;
+    }
+  });
+}
+
+window.addEventListener('DOMContentLoaded', includeHTML);

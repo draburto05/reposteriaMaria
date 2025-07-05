@@ -9,8 +9,13 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   </head>
+  
   <body>
-    <div id="nav-placeholder"></div>
+    <header>
+    <div data-include="/componentes/header.html"></div>
+    </header>
+
+    <main>
     <div class="contact-container">
       <aside class="contact-info">
         <h2>Contacto</h2>
@@ -83,7 +88,9 @@
     </form>
     <img src="img/fondo-maria.png" alt="Logo María Antonia" class="logo-bottom">
     </div>
-<div id="footer-placeholder"></div>
+    </main>
+
+    <div data-include="/componentes/footer.html"></div>
   </body>
     
 <script type="text/javascript"
@@ -99,22 +106,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="contacto.js"></script>
 
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("../componentes/header.html")
-      .then(res => res.text())
-      .then(data => {
-        const navContainer = document.getElementById("nav-placeholder");
-        if (navContainer) navContainer.innerHTML = data;
-      });
-
-    fetch("../componentes/footer.html")
-      .then(res => res.text())
-      .then(data => {
-        const footerContainer = document.getElementById("footer-placeholder");
-        if (footerContainer) footerContainer.innerHTML = data;
-      });
-  });
-</script>
     
 </html>

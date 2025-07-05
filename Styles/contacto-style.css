@@ -10,10 +10,13 @@ body {
   background-color: #f7f5fa;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 30px 15px;
+  margin-top: 5rem; /* *Agregue este margen en top para que el formulario no saliera pegado a la navbar */
   display: flex;
+  flex-direction: column; /* *Le agregue este flex-direction en columna para que el footer lo mandara hasta abajo de la pagina */
   justify-content: center;
   min-height: 100vh;
   align-items: center;
+  padding-bottom: 0; /* *agregue un padding bottom de 0 para que el footer este pegado al final de la pagina */
 }
 
 .contact-container {
@@ -252,3 +255,5 @@ hr {
     height: 100px;
   }
 }
+
+
