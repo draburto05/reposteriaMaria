@@ -3,6 +3,11 @@ body {
     background-color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
+main {
+  flex: 1;
+}
+
 .my-5 {
     text-align: center;
     color: #e5cee1;
@@ -19,7 +24,7 @@ label {
     margin-bottom: 5px;
 }
 
-.container {
+.forumulario-container {
     max-width: 600px;
     margin: 60px auto;
     background-color: #054646;
@@ -68,9 +73,9 @@ label {
   margin: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #lottie-container {
-    max-width: 300px;
+    max-width: 180px;
   }
 }
 
@@ -90,3 +95,13 @@ label {
   transform: translateY(-2px);
   
 }
+
+#imagePreview {
+  max-height: 250px;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+

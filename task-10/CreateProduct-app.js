@@ -45,7 +45,22 @@ const itemsController = new ItemsController();
 const form = document.querySelector("#newItemForm");
 const alertContainer = document.getElementById("alertContainer");
 const imageInput = document.querySelector("#newItemImage");
-const previewImg = document.getElementById("imagePreview");
+ // const previewImg = document.getElementById("imagePreview");
+
+//Imagen Preview
+/*imageInput.addEventListener("change", async () => {
+  const file = imageInput.files[0];
+
+  if (file && file.type.startsWith("image/")) {
+    const imageDataUrl = await fileToDataUrl(file); 
+    previewImg.src = imageDataUrl;
+    previewImg.classList.remove("d-none");
+  } else {
+    previewImg.classList.add("d-none");
+    previewImg.src = "#";
+  }
+});*/
+
 
 
 //Formulario
@@ -80,12 +95,12 @@ form.addEventListener("submit", async (event) => {
   }
 
   // Validación de imagen
-  if (!file) {
+ /* if (!file) {
     errores.push("Debes seleccionar una imagen.");
   } else if (!file.type.startsWith("image/")) {
     errores.push("El archivo seleccionado no es una imagen.");
   }
-
+  */
   // Mostrar errores si existen
   if (errores.length > 0) {
     mostrarAlerta(errores, "danger");
@@ -94,23 +109,19 @@ form.addEventListener("submit", async (event) => {
 
 
   /* Convierte la imagen a Base‑64 */
-  const imageDataUrl = await fileToDataUrl(file);
+  //const imageDataUrl = await fileToDataUrl(file);
 
   /*Guardar el producto*/ 
   const newItem = itemsController.addItem(
-    name, flavour, description, price, imageDataUrl
+    name, flavour, description, price,
   );
   console.log("Nuevo JSON:", JSON.stringify(newItem));
 
   /*Resetea para inciar otro registro */
   form.reset();
-  previewImg.classList.add("d-none");
+  //previewImg?.classList.add("d-none");
   mostrarAlerta(["Producto guardado con éxito ✅"], "success");
 });
-
-
-
-
 
 /*Animación  */
 lottie.loadAnimation({
