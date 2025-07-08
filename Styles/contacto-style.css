@@ -3,7 +3,7 @@
 ------------------------ */
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin-top: 0px;
   padding: 0;
 }
 body {
@@ -29,7 +29,7 @@ body, html {
   display: flex;
   flex-wrap: nowrap; /* inicialmente sin wrap para que queden lado a lado */
   gap: 40px;
-  max-width: 1000px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 30px 15px;
   justify-content: center;
@@ -58,10 +58,9 @@ form#contacto {
   box-sizing: border-box;
 }
 
-form#contacto h1 {
+.form-label{
   color: rgb(132, 114, 162);
-  font-weight: 700;
-  margin-bottom: 30px;
+  font-weight: 700; 
   text-align: center;
   letter-spacing: 1.1px;
 }
@@ -122,7 +121,7 @@ form#contacto label,
 }
 
 #btnSend:hover {
-  background-color: rgb(0, 70, 70);
+  background-color: rgb(11, 150, 153);
 }
 
 hr {
@@ -131,32 +130,17 @@ hr {
   margin: 25px auto;
   width: 90%;
 }
-
-.valid-tooltip {
-  background-color: rgb(3, 94, 95);
-  color: white;
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 6px 10px;
-}
-
-.invalid-tooltip {
-  background-color: #d9534f;
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 6px 10px;
-}
-
-/* -----------------------
-   Información lateral
------------------------- */
+/*etiqueta de contacto de la empresa*/
 .contact-info {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(132, 114, 162, 0.3);
   padding: 30px 40px;
-  width: 320px;
+  max-width: 470px;
   min-width: 280px;
+  max-height: 800px;
+  min-height: 550px;
+
   color: rgb(132, 114, 162);
   font-weight: 600;
   font-size: 1.1rem;
@@ -312,4 +296,3 @@ hr {
     padding-right: 20px;
   }
 }
-
