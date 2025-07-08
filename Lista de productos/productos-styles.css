@@ -3,7 +3,6 @@
 
       width: 220px;
       background-color: rgb(222, 210, 231);
-
       color: black;
       text-align: left;
       padding: 10px;
@@ -81,11 +80,25 @@
 }
 
 .productos-body {
-      content: "";
-      background-image: url(Productos/Background.png);
+      background-image: url(Productos/Background2.png);
       background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
       z-index: -1;
 }
+.overlay {    /* esta seccion hace opaca la imagen (logo) del fondo de la pagina */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.80); /* Blanco con opacidad del 80% */
+      z-index: -1;
+    }
+
 
 .productos-main {
       background-color: transparent;
