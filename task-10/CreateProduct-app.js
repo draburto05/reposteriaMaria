@@ -5,7 +5,7 @@ class ItemsController {
     this.items = JSON.parse(localStorage.getItem("items")) || [];
     this.currentId = this.items.length ? this.items.at(-1).id : 0;
   }
-/*additem crea un objeto */
+/*addItem crea un objeto */
   addItem(name, flavour, description, price, imageDataUrl) {
     const newItem = {
       id: ++this.currentId,

@@ -1,78 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* color del cuerpo del fondo de la pagina */
 body {
   background-color: #fff;
 }
-#carouselExampleSlidesOnly{
 
-  max-width: 2000px; /*tamaño de donde iran las imagenes*/
-  margin: 50px auto 0; /*margen superior para despegar de la navbar */
-  overflow: hidden; /*me permite controlar la imagen y su desboramiento en el contenedor para que luzca impecable*/
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /*da una apriencia de sombreado de mis imagenes lo cual me ayuda a mostrar la elimitacion y estetica de la smismas*/
+/* carrusel se llama con # porque es ID y la clase inner que es la que contiene las imagenes */
+#carouselExampleSlidesOnly .carousel-inner {
+  max-width: 2000px; /* tamaño de donde irán las imágenes */
+  margin: 50px auto 0; /* margen superior para despegar de la navbar */
+  overflow: hidden; /* me permite controlar la imagen y su desbordamiento en el contenedor para que luzca impecable */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* da una apariencia de sombreado de mis imágenes lo cual me ayuda a mostrar la delimitación y estética de las mismas */
 }
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  background-color: white;
-  padding: 10px;;
-}
-.hero .carousel-item {
-  width: 100%; /*ancho de la imagen*/
-  height: 1000px; /*Altura de la imagen*/
-  object-fit: cover; /* me cubrirá toda la sección sin deformar la imagen*/
 
-}
-  
 
-.carousel-item img {
+
+/* mi carrusel */
+.hero img {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
+  height: auto;
+  max-height: 800px;
 }
 
-.hero .btn {
-  background-color: #026766;
-  font-size: 24px;
-  padding: 20px 40px;
-  border-radius: 8px;
-  text-align: center;
-  display: inline-block;
+/* zona verde de productos donde está el botón e imágenes */
+.destacados {
+  text-align: center; /* texto de mi título centrado */
+  font-family: 'Montserrat', sans-serif; /* tipo de letra */
+  background-color:#026766; /* color de mi contenedor */
+  color: white; /* color de la letra que está dentro de mi contenedor verde */
+  padding: 100px; /* aquí me quedo */
 }
 
-.hero .btn:hover {
-  background-color: #024c4c;
+/* sección donde se colocaron las imágenes con los precios */
+.productos {
+  display: flex; /* activa Flexbox */
+  flex-wrap: wrap; /* empuja el botón al extremo derecho si cabe */
+  justify-content: center; /* me centra el contenido */
+  gap: 5rem; /* es el espacio designado entre las fotografías */
 }
 
-.recetas {
-  background-color: #026766;
-  color: white;
-  padding: 80px 30px;
+/* imágenes de la sección destacados donde están los productos */
+.producto {
+  width: 200px; /* ancho del contenedor que tiene mis imágenes */
+  border-radius: 8px; /* borde de las imágenes */
 }
 
-.overlay-img {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5cm;
-  align-items: center;
+/* área exacta de las imágenes */
+.producto img {
+  width: 100%; /* ancho */
+  border-radius: 8px; /* borde de las imágenes */
 }
 
-.overlay-img img {
-  width: 5cm;
-  height: 5cm;
-  object-fit: cover;
-  flex-shrink: 0;
+/* párrafos con etiqueta h3 que contienen nombre de los pasteles */
+.producto h3 {
+  font-size: 1rem; /* tamaño de la letra */
+  margin: 0.5rem 0; /* el margen o espacio entre los elementos de esa sección: nombre y precio */
 }
 
-.overlay-img .btn {
-  margin-left: auto;
+/* párrafo de precio */
+.producto p {
+  font-weight: lighter; /* grosor de los números */
+  color: white; /* color de los números */
 }
 
+/* zona de mis iconos verdes */
 .beneficios {
-  background-color: #f8f8f8;
-  padding: 30px 0;
-  font-size: 1.2rem;
+  background-color: #f8f8f8; /* color de mi contenedor */
+  padding: 30px 0; /* área de relleno en los cuatro lados de un elemento */
+  font-size: 1.2rem; /* tamaño de la letra */
 }
 
-.imagenes-recetas img {
-  width: 200px;
-  margin: 10px;
-  border-radius: 10px;
+.containerelements img {
+  width: 10%; /* ancho de los elementos */
+  height: 20%; /* altura de mis iconos */
+}
+@media (max-width: 768px) {
+  .destacados {
+    padding: 40px 20px;
+  }
+
+  .producto {
+    margin-bottom: 2rem;
+  }
+
+  .beneficios {
+    font-size: 1rem;
+  }
+
+  .containerelements .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerelements img {
+    margin-bottom: 1rem;
+  }
 }

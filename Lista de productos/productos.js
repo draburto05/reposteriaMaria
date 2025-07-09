@@ -5,7 +5,7 @@ let productosReposteria = [{
   id: 1, 
   nombre: "Pastel de chocolate", 
   imagen: "Productos/Pastel_de_chocolate.jpg", 
-  precio: 300, descripcion: "Delicioso pastel de chocolate", 
+  precio: 300, descripcion: "Pastel de chocolate", 
   disponible: true 
 },
 { 
@@ -167,6 +167,7 @@ mostrarLista();
 productosReposteria.forEach(producto => {
   renderProductos(producto);
 });
+
 
 
 // Borrar toda la lista
