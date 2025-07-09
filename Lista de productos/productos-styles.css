@@ -1,0 +1,102 @@
+.tooltip-text {
+      visibility: hidden;
+
+      width: 220px;
+      background-color: rgb(222, 210, 231);
+      color: black;
+      text-align: left;
+      padding: 10px;
+      border-radius: 6px;
+      opacity: 0;
+      /* Posición */
+      position: relative;
+      bottom: 50%;
+      left: 100%;
+      transform: translateX(-50%);
+      z-index: 1;
+}
+
+.tooltip-trigger {
+      position: relative;
+}
+
+.tooltip-trigger:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+}
+
+.cartas {
+      margin: 50px;
+      transition: transform 0.2s;
+      width: auto;
+      height: auto;
+      padding: 10px;
+      font-family: montserrat;
+
+}
+
+.card-img {
+      margin: 10px;
+}
+
+
+.listaProductos{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: 7rem;
+      
+}
+
+.boton {
+      height: 35px;
+      font-size: 15px;
+      color: white;
+      background-color: rgb(3, 94, 95);
+      border: none;
+}
+
+.boton:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+}
+
+.add {
+      border: rgb(3, 94, 95) 1px solid;
+      border-radius: 50%;
+      color: rgb(3, 94, 95);
+      margin: 5px;
+      height: 27px;
+      width: 27px;
+}
+
+.add:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+}
+
+.card-body {
+      display: flex;
+}
+
+.productos-body {
+      background-image: url(Productos/Background2.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      z-index: -1;
+}
+.overlay {    /* esta seccion hace opaca la imagen (logo) del fondo de la pagina */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.80); /* Blanco con opacidad del 80% */
+      z-index: -1;
+    }
