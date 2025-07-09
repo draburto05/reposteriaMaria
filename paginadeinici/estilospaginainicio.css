@@ -1,75 +1,68 @@
-
-
 body {
   background-color: #fff;
 }
+#carouselExampleSlidesOnly{
+
+  max-width: 2000px; /*tamaño de donde iran las imagenes*/
+  margin: 50px auto 0; /*margen superior para despegar de la navbar */
+  overflow: hidden; /*me permite controlar la imagen y su desboramiento en el contenedor para que luzca impecable*/
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /*da una apriencia de sombreado de mis imagenes lo cual me ayuda a mostrar la elimitacion y estetica de la smismas*/
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  background-color: white;
+  padding: 10px;;
+}
+.hero .carousel-item {
+  width: 100%; /*ancho de la imagen*/
+  height: 1000px; /*Altura de la imagen*/
+  object-fit: cover; /* me cubrirá toda la sección sin deformar la imagen*/
+
+}
+  
 
 .carousel-item img {
   width: 100%;
-  height: 500px; 
+  height: 500px;
   object-fit: cover;
-  
 }
 
-.hero .btn:hover{
-    background-color: #026766;
-
-}
 .hero .btn {
   background-color: #026766;
-  font-size: 24px; /* texto más grande */
-  padding: 20px 40px; /* más espacio interno */
-  width: auto; /* o un valor fijo como 300px */
-  display: inline-block;
+  font-size: 24px;
+  padding: 20px 40px;
+  border-radius: 8px;
   text-align: center;
-  border-radius: 8px; /* opcional: esquinas redondeadas */
-}
-/* 1Contenedor flex en fila */
-.overlay-img{
-  display:flex;           /* activa Flexbox */
-  flex-wrap:wrap;         /* para que el botón salte abajo si no cabe */
-  gap:0.5cm;              /* espacio entre elementos (opcional) */
-  align-items:center;     /* centra verticalmente imágenes y botón */
+  display: inline-block;
 }
 
-/* 2 Todas las imágenes: 5 cm × 5 cm */
-.overlay-img img{
-  width:5cm;
-  height:5cm;
-  object-fit:cover;       /* recorta sin deformar; usa "contain" si NO quieres recorte */
-  flex-shrink:0;          /* evita que se reduzcan al achicar la ventana */
+.hero .btn:hover {
+  background-color: #024c4c;
 }
 
-/*  Botón separado de las imágenes */
-.overlay-img .btn{
-  margin-left:auto;       /* empuja el botón al extremo derecho si cabe */
-  /*  margin-top:0.5cm si quiero que quede debajo */
-}
-
-
-
-.overlay-text h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  
-}
-
-.overlay-text h2 {
-  font-size: 2rem;
-}
-btn-success mt-3{
-    background-color: #026766;
-}
 .recetas {
   background-color: #026766;
   color: white;
   padding: 80px 30px;
 }
 
-.imagenes-recetas img {
-  width: 200px;
-  margin: 10px;
-  border-radius: 10px;
+.overlay-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5cm;
+  align-items: center;
+}
+
+.overlay-img img {
+  width: 5cm;
+  height: 5cm;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.overlay-img .btn {
+  margin-left: auto;
 }
 
 .beneficios {
@@ -78,4 +71,8 @@ btn-success mt-3{
   font-size: 1.2rem;
 }
 
-
+.imagenes-recetas img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
