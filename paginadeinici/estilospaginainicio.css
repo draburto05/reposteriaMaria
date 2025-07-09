@@ -18,18 +18,13 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* da una apariencia de sombreado de mis imágenes lo cual me ayuda a mostrar la delimitación y estética de las mismas */
 }
 
-.carousel {
-  display: flex; /* activa Flexbox */
-  transition: transform 0.5s ease-in-out; /* tiempo de transición de mis imágenes del carrusel */
-  background-color: white; /* color del fondo de mi contenedor */
-  padding: 5px; /* área de relleno de los cuatro lados de mi elemento */
-}
+
 
 /* mi carrusel */
-.hero .carousel-item {
-  width: 100%; /* ancho de mi imagen */
-  height: 1000px; /* Altura de mi imagen */
-  object-fit: cover; /* me cubrirá toda la sección sin deformar la imagen */
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
 }
 
 /* zona verde de productos donde está el botón e imágenes */
@@ -83,4 +78,26 @@ body {
 .containerelements img {
   width: 10%; /* ancho de los elementos */
   height: 20%; /* altura de mis iconos */
+}
+@media (max-width: 768px) {
+  .destacados {
+    padding: 40px 20px;
+  }
+
+  .producto {
+    margin-bottom: 2rem;
+  }
+
+  .beneficios {
+    font-size: 1rem;
+  }
+
+  .containerelements .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerelements img {
+    margin-bottom: 1rem;
+  }
 }
