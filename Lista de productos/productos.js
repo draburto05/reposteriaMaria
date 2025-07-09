@@ -175,6 +175,7 @@ mostrarLista();
 
 
 
+//insertar el header (navbar) y footer al html de la pagina Productos.
 document.addEventListener("DOMContentLoaded", () => {   // sirve para esperar a que todo el contenido html este cargado
       fetch("../componentes/header.html")   // Carga el archivo header que esta en la carpeta componentes
         .then(res => res.text())  // Convierte el contenido del archivo en texto 
