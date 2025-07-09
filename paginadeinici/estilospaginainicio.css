@@ -3,10 +3,10 @@ body {
 }
 #carouselExampleSlidesOnly{
 
-  max-width: 2000px; /tamaño de donde iran las imagenes/
-  margin: 50px auto 0;/* margen superior para despegar de la navbar */
-  overflow: hidden; /me permite controlar la imagen y su desboramiento en el contenedor para que luzca impecable/
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);/da una apriencia de sombreado de mis imagenes lo cual me ayuda a mostrar la elimitacion y estetica de la smismas/
+  max-width: 2000px; /*tamaño de donde iran las imagenes*/
+  margin: 50px auto 0; /* margen superior para despegar de la navbar */
+  overflow: hidden; /*me permite controlar la imagen y su desboramiento en el contenedor para que luzca impecable*/
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /*da una apriencia de sombreado de mis imagenes lo cual me ayuda a mostrar la elimitacion y estetica de la smismas*/
 }
 .carousel {
   display: flex;
@@ -15,7 +15,7 @@ body {
   padding: 10px;;
 }
 .hero .carousel-item {
-  width: 100%;/ancho de la imagen/
+  width: 100%;/*ancho de la imagen*/
   height: 1000px; /* Altura de la imagen*/
   object-fit: cover; /* me cubrirá toda la sección sin deformar la imagen*/
 
