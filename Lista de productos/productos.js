@@ -175,20 +175,12 @@ mostrarLista();
 
 
 
-//Añadiendo el header y el footer a la pagina productos
-function includeHTML() {
-  const elements = document.querySelectorAll('[data-include]');
-  elements.forEach(async (el) => {
-    const file = el.getAttribute('data-include');
-    try {
-      const response = await fetch(file);
-      if (!response.ok) throw new Error(`Error al cargar ${file}`);
-      const html = await response.text();
-      el.innerHTML = html;
-    } catch (err) {
-      el.innerHTML = `<p style="color:red;">${err.message}</p>`;
-    }
-  });
-}
+document.addEventListener("DOMContentLoaded", () => {   // sirve para esperar a que todo el contenido html este cargado
+      fetch("../componentes/header.html")   // Carga el archivo header que esta en la carpeta componentes
+        .then(res => res.text())  // Convierte el contenido del archivo en texto 
+        .then(data => document.getElementById("nav-placeholder").innerHTML = data); // Inserta ese texto dentro del elemento que tenga el id nav-placeholder
 
-window.addEventListener('DOMContentLoaded', includeHTML);
+      fetch("../componentes/footer.html")  
+        .then(res => res.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    });
