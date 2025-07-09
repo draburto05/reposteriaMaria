@@ -4,81 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Repostería María Antonieta</title>
-  <link rel="stylesheet" href="estilospaginainicio.css" />
+  <link rel="stylesheet" href="estilospaginainicio.css"/>
+  <link rel="stylesheet" href="../componentes/nav-footer.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+
 </head>
-
 <body>
-  <div id="nav-placeholder"></div>
 
-  <main class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-    <!-- Carrusel -->
-    <section class="hero">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="/About-WorkTeam/Fotos/CARROUSEL1.png" alt="Slide 1">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/About-WorkTeam/Fotos/CARROUSEL2.png" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/About-WorkTeam/Fotos/CARROUSEL3.png" alt="Slide 3">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/About-WorkTeam/Fotos/CARROUSEL4.png" alt="Slide 4">
-          </div>
-        </div>
+   <div id="nav-placeholder"></div>
+
+
+  <!-- seccion hero carrusel-->
+  <section class="hero">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/About-WorkTeam/Fotos/1 (1).png" class="d-block w-100" alt="Primer Slide">
+    </div>
+    <div class="carousel-item">
+      <img src="/About-WorkTeam/Fotos/2 (1).png" class="d-block w-100" alt="Segunda Slide">
+    </div>
+    <div class="carousel-item">
+      <img src="/About-WorkTeam/Fotos/3.png" class="d-block w-100" alt="Cuarta Slide">
+    </div>
+  </div>
+</div>
+  </section>
+  <!-- seccion destacados -->
+<section class="destacados">
+  <h2>Destacados</h2>
+  <br>
+  <br>
+  <div class="productos">
+    <div class="producto">
+      <img src="/About-WorkTeam/Fotos/especial1.png" alt="Cheesecake">
+      <h3>Cheesecake Saludable</h3>
+      <p>$580.00</p>
+    </div>
+    <div class="producto">
+      <img src="/About-WorkTeam/Fotos/especial2.png" alt="Mostachon">
+      <h3>Mostachon</h3>
+      <p>$480</p>
+    </div>
+    <div class="producto">
+      <img src="/About-WorkTeam/Fotos/especial3.png" alt="Pastel de crepas">
+      <h3>Pastel de crepas</h3>
+      <p>$380</p>
+    </div>
+     <div class="producto">
+      <img src="/About-WorkTeam/Fotos/especial4.png " alt="Brazo gitano">
+      <h3>Brazo gitano petalos de rosas y fresas</h3>
+      <p>$390</p>
+    </div>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
+  <button class="mi-boton" type="button" style="background-color: rgb(188, 157, 200);">Compra en línea</button>
+  </div>
+
+</section>
+
+  <!-- Beneficios, de recoge en tienda, ordena en linea y formas de pago-->
+  <section class="beneficios text-center">
+    <div class="containerelements">
+      <div class="row">
+        <div class="col-md-4"> <img src="/About-WorkTeam/Fotos/devices.png" alt="Dispositivos"> <br><p>| Ordena en línea </p>
+        <p>"Ordena fácil, disfruta Delicioso"</p></div>
+        <div class="col-md-4"> <img src="/About-WorkTeam/Fotos/cash.png"  alt="cash"> <img src="/About-WorkTeam/Fotos/arrow.png" alt="flecha"> <img src="/About-WorkTeam/Fotos/shp.png" alt="Tienda"><p>|| Paga y recoge</p>
+        <p>Los metodos de pago que aceptamos son:</p>
+        <ul>
+          <ol>Pago en efectivo</ol>
+          <ol>Pago con tarjeta</ol>
+          <ol>Transferencia bancaria</ol>
+          <ol>Pago en OXXO</ol>
+        </ul>
       </div>
-    </section>
-
-    <!-- Recetas -->
-    <section class="recetas text-center">
-      <h3>NUESTROS ESPECIALES DEL MES</h3>
-      <div class="overlay-img">
-        <img src="../About-WorkTeam/Fotos/especial1.png" alt="especial1">
-        <img src="../About-WorkTeam/Fotos/especial2.png" alt="especial2">
-        <img src="../About-WorkTeam/Fotos/especial3.png" alt="especial3">
-        <a href="#" class="btn btn-success mt-3">ORDENA EN LÍNEA</a>
+        <div class="col-md-4" "> <img src="/About-WorkTeam/Fotos/cakelogo.png" alt="image cake"><p>||| Disfruta tu pastel</p>
+        <p>"Arte y sabor en cada pastel de María Antonieta"</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Beneficios -->
-    <section class="beneficios text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="/About-WorkTeam/Fotos/devices.png" alt="Ordena en línea">
-            <p>| Ordena en línea</p>
-            <p>"Ordena fácil, disfruta Delicioso"</p>
-          </div>
-          <div class="col-md-4">
-            <img src="/About-WorkTeam/Fotos/cash.png" alt="Pago">
-            <img src="/About-WorkTeam/Fotos/arrow.png" alt="Flecha">
-            <img src="/About-WorkTeam/Fotos/shp.png" alt="Tienda">
-            <p>|| Paga y recoge</p>
-            <ul>
-              <li>Pago en efectivo</li>
-              <li>Pago con tarjeta</li>
-              <li>Transferencia bancaria</li>
-              <li>Pago en OXXO</li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <img src="/About-WorkTeam/Fotos/cakelogo.png" alt="Pastel">
-            <p>||| Disfruta tu pastel</p>
-            <p>"Arte y sabor en cada pastel de María Antonieta"</p>
-          </div>
-        </div>
-      </div>
-    </section>
+     <div id="footer-placeholder"></div>
+  </section>
 
-    <div id="footer-placeholder"></div>
-  </main>
-
-  <script>
+<script>
     document.addEventListener("DOMContentLoaded", () => {   // sirve para esperar a que todo el contenido html este cargado
       fetch("../componentes/header.html")   // Carga el archivo header que esta en la carpeta componentes
         .then(res => res.text())  // Convierte el contenido del archivo en texto 
@@ -89,7 +101,8 @@
         .then(data => document.getElementById("footer-placeholder").innerHTML = data);
     });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
