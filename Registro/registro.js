@@ -6,4 +6,6 @@ document.querySelector('#registro').addEventListener('submit', function(event) {
   const lastName = document.querySelector('#validationApellido').value.trim();
   const email = document.querySelector('#validationEmailR').value.trim();
   const tel = document.querySelector('#validationPhoneR').value.trim();
-  const coment = document.querySelector('#validationPasswordR').value.trim();
+  const password = document.querySelector('#validationPassword').value.trim();
+  const passwordR = document.querySelector('#validationPasswordR').value.trim();
+});
