@@ -1,9 +1,10 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #f8f9fa;
 }
 
 .card {
+  font-family: 'Montserrat', sans-serif;
   border: none;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -15,6 +16,7 @@ body {
   font-weight: 600;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card-body {
@@ -24,11 +26,13 @@ body {
 .form-label {
   font-weight: 600;
   color: #333;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form-control {
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn-primary {
@@ -36,6 +40,10 @@ body {
   border: none;
   border-radius: 8px;
   font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  
+  
+
 }
 
 .btn-primary:hover {
@@ -52,7 +60,7 @@ body {
   text-decoration: underline;
 }
 
-.btn-google {
+/*.btn-google {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,8 +75,9 @@ body {
   width: 20px;
   height: 20px;
 }
-
+*/
 .alert {
   border-radius: 8px;
   font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
 }
