@@ -8,6 +8,9 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+  <!-- Estilos específicos para nav y footer -->
+    <link rel="stylesheet" href="../componentes/nav-footer.css"> 
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <!-- Estilos personalizados -->
@@ -17,13 +20,17 @@
   <script src="inicioSesion.js" defer></script>
 </head>
 
-<body class="bg-light">
+<body>
+ <!--Para linkear -->
+  <div id="nav-placeholder"></div>
+
+  <main>
   <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
 
       <!-- Columna de la imagen -->
-      <div class="col-md-5 text-center mb-4 mb-md-0">
-        <img src="img/brownies.webp" alt="Imagen lateral" class="img-fluid" style="max-height: 280px;" />
+      <div class="col-md-5 d-flex align-items-center justify-content-center">
+        <img src="img/brownies.webp" alt="Imagen lateral" class="img-fluid w-100" />
       </div>
 
       <!-- Columna del formulario -->
@@ -73,6 +80,24 @@
       </div> <!-- end col formulario -->
 
     </div> <!-- end row -->
-  </div> <!-- end container -->
+  </div><!-- end container -->
+  </main> 
+   <!--Para linkear -->
+   <div id="footer-placeholder"></div>
+    <!-- Scripts para cargar componentes -->
+  <script>
+    fetch('../componentes/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+
+    fetch('../componentes/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
 </body>
 </html>

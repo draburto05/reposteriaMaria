@@ -3,6 +3,11 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Imagen lateral más grande */
+.col-md-5.text-center img {
+  max-height: 360px;
+}
+
 .card {
   font-family: 'Montserrat', sans-serif;
   border: none;
@@ -17,6 +22,8 @@ body {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff; /* Formulario blanco */
+  color: #333;
 }
 
 .card-body {
@@ -29,14 +36,26 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Inputs con fondo verde claro y texto verde oscuro */
 .form-control {
   border-radius: 8px;
-  border: 1px solid #ccc;
   font-family: 'Montserrat', sans-serif;
+  border: 1px solid rgb(3, 94, 95);
+  background-color: #d1f0ec; /* verde claro */
+  color: rgb(3, 94, 95);
 }
 
+/* Opcional: cambia de color al enfocar */
+.form-control:focus {
+  background-color: #b8e5e0;
+  border-color: rgb(3, 94, 95);
+  box-shadow: 0 0 0 0.2rem rgba(3, 94, 95, 0.25);
+}
+
+/* Botón principal */
 .btn-primary {
   background-color: rgb(3, 94, 95);
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -50,6 +69,7 @@ body {
   background-color: #02494a;
 }
 
+/* Links */
 .extra-links a {
   font-size: 0.9rem;
   text-decoration: none;
@@ -60,7 +80,8 @@ body {
   text-decoration: underline;
 }
 
-/*.btn-google {
+/* Botón Google */
+.btn-google {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,6 +90,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-weight: 500;
+  color: rgb(3, 94, 95);
 }
 
 .btn-google img {
@@ -79,5 +101,4 @@ body {
 .alert {
   border-radius: 8px;
   font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
 }
