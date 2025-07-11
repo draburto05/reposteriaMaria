@@ -1,0 +1,80 @@
+body {
+  background-color: #ffe6db;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: none;
+  padding-top: 1.5rem;
+}
+
+h4 {
+  color: #603f8b;
+  font-weight: bold;
+}
+
+.form-label {
+  color: #333;
+  font-weight: 500;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: rgb(3, 94, 95);
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: rgb(2, 80, 81);
+}
+
+.btn-google {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+}
+
+.extra-links {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.extra-links a {
+  color: rgb(3, 94, 95);
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+#alerta {
+  font-size: 0.9rem;
+}
