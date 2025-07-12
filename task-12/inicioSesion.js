@@ -64,7 +64,7 @@ form.addEventListener("submit", function(e){
         mostrarExito(`Bienvenido, ${usuarioValido.nombre}`);
 
         setTimeout(() => {
-            location.href = "inicioSesion.html";
+            location.href = "../paginadeinici/paginadeinicio.html";
         }, 2000); //espera 2 s
     }else{
         mostrarError("Datos inválidos");  
