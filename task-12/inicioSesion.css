@@ -1,75 +1,79 @@
-body {
+/* Fuente y fondo general */
+html, body {
+  height: 100%;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Imagen lateral más grande */
+/* Mantiene el main creciendo y empuja el footer abajo */
+main {
+  flex: 1;
+}
+
+/* Imagen lateral */
 .col-md-5.text-center img {
-  max-height: 360px;
+  max-height: 460px;
+  width: 100%;
+  object-fit: cover;
 }
 
+/* Tarjeta de formulario */
 .card {
-  font-family: 'Montserrat', sans-serif;
   border: none;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-  background-color: rgb(3, 94, 95);
-  color: white;
-  font-weight: 600;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ffffff; /* Formulario blanco */
+  background-color: #ffffff;
   color: #333;
 }
 
+/* Contenedor del contenido */
 .card-body {
   padding: 2rem;
 }
 
+.card-body img {
+  max-height: 160px;
+}
+
+/* Etiquetas de inputs */
 .form-label {
   font-weight: 600;
   color: #333;
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* Inputs con fondo verde claro y texto verde oscuro */
+/* Inputs con fondo verde claro */
 .form-control {
   border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
-  border: 1px solid rgb(3, 94, 95);
-  background-color: #d1f0ec; /* verde claro */
-  color: rgb(3, 94, 95);
+  border: 1px solid rgb(3, 94, 95) !important;
+  background-color: #d1f0ec !important;
+  color: rgb(3, 94, 95) !important;
 }
 
-/* Opcional: cambia de color al enfocar */
+/* Estilo al enfocar input */
 .form-control:focus {
-  background-color: #b8e5e0;
-  border-color: rgb(3, 94, 95);
-  box-shadow: 0 0 0 0.2rem rgba(3, 94, 95, 0.25);
+  background-color: #b8e5e0 !important;
+  border-color: rgb(3, 94, 95) !important;
+  box-shadow: 0 0 0 0.2rem rgba(3, 94, 95, 0.25) !important;
 }
 
-/* Botón principal */
+/* Botón de ingresar */
 .btn-primary {
-  background-color: rgb(3, 94, 95);
-  color: #ffffff;
+  background-color: rgb(3, 94, 95) !important;
+  color: #ffffff !important;
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  
-  
-
 }
 
+/* Hover botón */
 .btn-primary:hover {
-  background-color: #02494a;
+  background-color: #02494a !important;
 }
 
-/* Links */
+/* Enlaces extras */
 .extra-links a {
   font-size: 0.9rem;
   text-decoration: none;
@@ -80,7 +84,7 @@ body {
   text-decoration: underline;
 }
 
-/* Botón Google */
+/* Botón Google (comentado por ahora) */
 .btn-google {
   display: flex;
   align-items: center;
@@ -97,8 +101,16 @@ body {
   width: 20px;
   height: 20px;
 }
-*/
+
+/* Alertas */
 .alert {
   border-radius: 8px;
   font-weight: 500;
+}
+
+/* Footer (si quieres forzarle un estilo) */
+#footer-placeholder {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
 }
