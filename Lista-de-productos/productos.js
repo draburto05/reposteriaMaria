@@ -85,15 +85,22 @@ let productosReposteria = [{
 let carrito = [];
 let totalCarrito = 0;
 
-// Renderizar producto
+// Renderizado de los productos
 const renderProductos = (producto) => {
+  // Detecta los nombres correctos según el origen del producto
+  const nombre      = producto.nombre || producto.name || "Sin nombre";
+  const descripcion = producto.descripcion || producto.description || "Sin descripción";
+  const precio      = producto.precio || producto.price || 0;
+  const imagen      = producto.imagen || producto.imageDataUrl || "Productos/default.jpg";
+ console.log("URL de imagen:", imagen);
+
   const cardProducto = `
     <div class="cartas m-2 tooltip-trigger" style="width: 18rem;">
-      <img src="${producto.imagen}" class="card-img-top card-img tooltip-trigger" alt="${producto.descripcion || 'Imagen del producto'}">
-      <h5 class="card-title">${producto.nombre}</h5>
+      <img src="${imagen}" class="card-img-top card-img tooltip-trigger" alt="${descripcion || 'Imagen del producto'}">
+      <h5 class="card-title">${nombre}</h5>
       <div class="card-body tooltip-trigger">
-        <p class="card-text">$${producto.precio}</p>
-        <div class="tooltip-trigger"><p class="card-text tooltip-text">${producto.descripcion}</p></div>
+        <p class="card-text">$${precio}</p>
+        <div class="tooltip-trigger"><p class="card-text tooltip-text">${descripcion}</p></div>
       </div>
       <button class="btn-mas">+</button>
       <button class="btn-menos">-</button>
@@ -124,6 +131,17 @@ function agregarAlCarrito(productoId) {
   mostrarCarrito();
 
 }
+
+// mostrar los productos guardados
+const productosGuardados = JSON.parse(localStorage.getItem("items")) || [];
+
+productosGuardados.forEach(producto => {
+  console.log("Producto para render:", producto);
+  const imagen = producto.imageDataUrl || producto.imagen || "Productos/default.jpg";
+  console.log("URL de imagen que se usará:", imagen);
+  renderProductos(producto);
+  console.log("Productos desde localStorage:", productosGuardados);
+});
 
 // Incrementar cantidad
 function incrementarCantidad(productoId) {
