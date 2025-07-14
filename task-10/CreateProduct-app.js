@@ -95,12 +95,12 @@ form.addEventListener("submit", async (event) => {
   }
 
   // Validación de imagen
- /* if (!file) {
+ if (!file) {
     errores.push("Debes seleccionar una imagen.");
   } else if (!file.type.startsWith("image/")) {
     errores.push("El archivo seleccionado no es una imagen.");
   }
-  */
+  
   // Mostrar errores si existen
   if (errores.length > 0) {
     mostrarAlerta(errores, "danger");
@@ -109,20 +109,24 @@ form.addEventListener("submit", async (event) => {
 
 
   /* Convierte la imagen a Base‑64 */
-  //const imageDataUrl = await fileToDataUrl(file);
+  const imageDataUrl = await fileToDataUrl(file);
 
   /*Guardar el producto*/ 
   const newItem = itemsController.addItem(
-    name, flavour, description, price,
+    name, flavour, description, price, imageDataUrl
   );
   console.log("Nuevo JSON:", JSON.stringify(newItem));
+  console.log(newItem.imageDataUrl);
 
   /*Resetea para inciar otro registro */
   form.reset();
   //previewImg?.classList.add("d-none");
   mostrarAlerta(["Producto guardado con éxito ✅"], "success");
-});
 
+  //redirigir automáticamente a la galería
+  window.location.href = "../Lista-de-productos/productos.html";
+});
+console.log(localStorage.getItem("items"));
 /*Animación  */
 lottie.loadAnimation({
   container: document.getElementById("lottie-container"),
