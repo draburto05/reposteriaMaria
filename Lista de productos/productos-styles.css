@@ -1,3 +1,10 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
 .tooltip-text {
       visibility: hidden;
 
@@ -100,3 +107,12 @@
       background-color: rgba(255, 255, 255, 0.80); /* Blanco con opacidad del 80% */
       z-index: -1;
     }
+
+@media (max-width: 768px) {
+  .productos-body {
+    background-image: url("Productos/Background.png");
+    background-size: contain; /* Escala la imagen completa */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centra tanto en vertical como horizontal */
+  }
+}

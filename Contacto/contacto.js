@@ -3,7 +3,7 @@ emailjs.init({ publicKey: "oiBY7QlJnAHEZrQkx" }); //se inicia el servicio de ema
 document.querySelector('#contacto').addEventListener('submit', function(event) { //se manda a traer el formulario de contacto y se agrega el evento que se escuchara al dar clic en el boton
   event.preventDefault();
   
-  //se obtienen los valores del formulario y el id de susu validaciones 
+  //se obtienen los valores del formulario y el id de su validaciones 
   const name = document.querySelector('#validationName').value.trim();  
   const lastName = document.querySelector('#validationLastName').value.trim();
   const email = document.querySelector('#validationEmail').value.trim();
@@ -109,19 +109,12 @@ document.querySelector('#contacto').addEventListener('submit', function(event) {
 });
 
 // Función para incluir header y footer
-function includeHTML() {
-  const elements = document.querySelectorAll('[data-include]');
-  elements.forEach(async (el) => {
-    const file = el.getAttribute('data-include');
-    try {
-      const response = await fetch(file);
-      if (!response.ok) throw new Error(`Error al cargar ${file}`);
-      const html = await response.text();
-      el.innerHTML = html;
-    } catch (err) {
-      el.innerHTML = `<p style="color:red;">${err.message}</p>`;
-    }
-  });
-}
+document.addEventListener("DOMContentLoaded", () => {   // sirve para esperar a que todo el contenido html este cargado
+      fetch("../componentes/header.html")   // Carga el archivo header que esta en la carpeta componentes
+        .then(res => res.text())  // Convierte el contenido del archivo en texto 
+        .then(data => document.getElementById("nav-placeholder").innerHTML = data); // Inserta ese texto dentro del elemento que tenga el id nav-placeholder
 
-window.addEventListener('DOMContentLoaded', includeHTML);
+      fetch("../componentes/footer.html")  
+        .then(res => res.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    });

@@ -1,52 +1,14 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+
+
 * {
     font-family: "Montserrat", sans-serif;
 }
 
-.nav-pills .nav-link {
-  color: #2c3e50;
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 10px 15px;
-  margin: 0 5px;
-  border-radius: 30px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-pills .nav-link:hover,
-.nav-pills .nav-link:focus {
-  background-color: #421f52;
-  color: #fff;
-}
-.navbar-logo img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 120px;
-    height: 60px;
-}
 
 .logo {
     width: 100px;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: #5c5c5c;
-    border-color: #108d6f;
-    box-shadow: none;
-    outline: none;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #007b5e;
-    border-color: #007b5e;
-}
-
-.nav-pills .nav-link.active {
-  background-color: #421f52;
-  color: #fff;
 }
 
 
@@ -105,8 +67,6 @@
   }
 }
 
-
-
 #team {
     background: linear-gradient(135deg, #f5f5f5 0%, #BC9DC8 100%) !important;
     padding: 80px 0;
@@ -115,10 +75,26 @@
  
 }
 
+#nosotros {
+    color: #421f52;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
 .descripcion{
     text-align: justify;
     font-family: "Montserrat", sans-serif;
     font-size: 1.18rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#equipo {
+    color: #421f52;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .frontside, .backside {
@@ -145,24 +121,21 @@
     /*Scroll si el contenido es muy largo */
 }
 
-section {
+.section {
     padding: 60px 0;
 }
 
-section .section-title {
+.section .section-title {
     text-align: center;
     color: #421f52;
     margin-bottom: 2rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;;
+    font-family: "Montserrat", sans-serif;
     size-adjust: center;
 }
 
-#equipo {
-    margin-top: 4rem;
-}
 
 #team .card {
     border: none;
@@ -272,13 +245,6 @@ section .section-title {
     transition: 0.3s;
 }
 
-.mi-footer {
-    background-color: rgb(248, 247, 248);
-    text-align: center;
-    font-size: 1.3rem;
-    font-family: "Montserrat", sans-serif;;
-    color: #421f52;
-}
 
 .icono-red {
     width: 40px;
@@ -300,14 +266,5 @@ section .section-title {
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;
 }
-
-
-
-
-
-
-
-
-
