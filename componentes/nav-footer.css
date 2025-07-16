@@ -1,3 +1,5 @@
+
+
 .container-fluid { 
   display: flex;
   justify-content: space-between; 
@@ -128,35 +130,5 @@
   /* disminuye un poco el tamaño del texto */
   .mi-footer {
     font-size: 1rem;
-  }
-}
-
-
- @media (max-width: 768px) {
-  .container-fluid {
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-  }
-
-  .logo-brand-group {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    display: flex;
-    gap: 15px;
-    flex-wrap: nowrap;
-  }
-
-  .iconos-usuario {
-    justify-content: center;
-    margin-top: 10px;
   }
 }
