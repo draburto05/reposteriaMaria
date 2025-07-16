@@ -1,10 +1,47 @@
-.container-fluid { /* color de fondo del contenedor */
+.container-fluid { 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
   background-color: #e6d2ec;
+  padding: 0 20px; 
+  flex-wrap: nowrap;
 }
+
 
 .navbar-logo img { /* clase que llama al logo */
   width: 90px; /* ancho del logo */
-  height: 60px; /* altura del logo */
+  height: auto; /* altura del logo */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caviar+Dreams&display=swap');
+
+.brand-nombre {
+  font-family: 'Caviar Dreams', sans-serif;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  height: 60px;
+}
+
+.logo-brand-group{
+   display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
 }
 
 /* se manda a llamar el contenido dentro de los botones del nav */
@@ -26,9 +63,11 @@
 }
 
 .iconos-usuario { /* clase que me manda a llamar los iconos de carrito y usuario */
-  gap: 20px;
-  align-items: center; /* me alinea los iconos */
-  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 10px;
+  flex-shrink: 0; /* No se achican ni deforman */
 }
 
 /* se asigna tamaño de logos de carrito y usuario */
@@ -89,5 +128,35 @@
   /* disminuye un poco el tamaño del texto */
   .mi-footer {
     font-size: 1rem;
+  }
+}
+
+
+ @media (max-width: 768px) {
+  .container-fluid {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .logo-brand-group {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+  }
+
+  .iconos-usuario {
+    justify-content: center;
+    margin-top: 10px;
   }
 }
