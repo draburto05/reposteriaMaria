@@ -1,103 +1,255 @@
+/* --- Variables y Reset Global --- */
+:root {
+  --primary-color: rgb(188, 157, 200);
+  --secondary-color: rgb(170, 135, 185);
+  --text-dark: #333;
+  --text-light: #f8f9fa;
+  --background-light: #f4f4f4;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: Arial, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* color del cuerpo del fondo de la pagina */
 body {
-  background-color: #fff;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background: var(--background-light) url(/paginadeinici/Fotos/carrusel1.png) center/cover no-repeat fixed;
 }
 
-/* carrusel se llama con # porque es ID y la clase inner que es la que contiene las imagenes */
-#carouselExampleSlidesOnly .carousel-inner {
-  max-width: 2000px; /* tamaño de donde irán las imágenes */
-  margin: 50px auto 0; /* margen superior para despegar de la navbar */
-  overflow: hidden; /* me permite controlar la imagen y su desbordamiento en el contenedor para que luzca impecable */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* da una apariencia de sombreado de mis imágenes lo cual me ayuda a mostrar la delimitación y estética de las mismas */
+/* --- Carrusel --- */
+.hero-carousel {
+  margin-bottom: 3rem;
 }
 
+.carousel-container-custom {
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-
-/* mi carrusel */
-.hero img {
+.carousel-img-altura {
   width: 100%;
-  height: auto;
-  max-height: 800px;
+  height: 550px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(70%);
 }
 
-/* zona verde de productos donde está el botón e imágenes */
-.destacados {
-  text-align: center; /* texto de mi título centrado */
-  font-family: 'Montserrat', sans-serif; /* tipo de letra */
-  background-color:#026766; /* color de mi contenedor */
-  color: white; /* color de la letra que está dentro de mi contenedor verde */
-  padding: 100px; /* aquí me quedo */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 60%;
+  left: 5%;
+  bottom: 10%;
+  text-align: left;
+  color: var(--text-light);
 }
 
-/* sección donde se colocaron las imágenes con los precios */
-.productos {
-  display: flex; /* activa Flexbox */
-  flex-wrap: wrap; /* empuja el botón al extremo derecho si cabe */
-  justify-content: center; /* me centra el contenido */
-  gap: 5rem; /* es el espacio designado entre las fotografías */
+.carousel-caption h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: 0.5rem;
 }
 
-/* imágenes de la sección destacados donde están los productos */
-.producto {
-  width: 200px; /* ancho del contenedor que tiene mis imágenes */
-  border-radius: 8px; /* borde de las imágenes */
+.carousel-caption p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 1.5rem;
 }
 
-/* área exacta de las imágenes */
-.producto img {
-  width: 100%; /* ancho */
-  border-radius: 8px; /* borde de las imágenes */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 15px;
 }
 
-/* párrafos con etiqueta h3 que contienen nombre de los pasteles */
-.producto h3 {
-  font-size: 1rem; /* tamaño de la letra */
-  margin: 0.5rem 0; /* el margen o espacio entre los elementos de esa sección: nombre y precio */
+/* --- Botones Personalizados --- */
+.btn-primary-custom,
+.btn-secondary-custom,
+.btn-order-cta {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
 }
 
-/* párrafo de precio */
-.producto p {
-  font-weight: lighter; /* grosor de los números */
-  color: white; /* color de los números */
+.btn-primary-custom:hover,
+.btn-secondary-custom:hover,
+.btn-order-cta:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* zona de mis iconos verdes */
-.beneficios {
-  background-color: #f8f8f8; /* color de mi contenedor */
-  padding: 30px 0; /* área de relleno en los cuatro lados de un elemento */
-  font-size: 1.2rem; /* tamaño de la letra */
+.btn-order-cta {
+  font-size: 1.5rem;
+  padding: 1.5rem 3rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.containerelements img {
-  width: 10%; /* ancho de los elementos */
-  height: 20%; /* altura de mis iconos */
+/* --- Productos Destacados --- */
+.featured-products {
+  background-color: var(--background-light);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
 }
-@media (max-width: 768px) {
-  .destacados {
-    padding: 40px 20px;
+
+.featured-products h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card .card-title {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.product-card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.product-card .card-footer {
+  padding: 1rem 1.5rem;
+  background-color: var(--background-light);
+  border-top: none;
+}
+
+/* --- Beneficios --- */
+.benefits-section {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 4rem 0;
+}
+
+.benefits-section img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.benefits-section .benefit-icon-small {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+}
+
+.benefits-section p {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+  .carousel-img-altura {
+    height: 450px;
   }
 
-  .producto {
-    margin-bottom: 2rem;
+  .carousel-caption {
+    max-width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 
-  .beneficios {
+  .carousel-caption .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-img-altura {
+    height: 350px;
+  }
+
+  .carousel-caption {
+    max-width: 90%;
+    padding: 1rem;
+    bottom: 5%;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .btn-order-cta {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  .benefits-section img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .benefits-section .benefit-icon-small {
+    width: 40px;
+    height: 40px;
+  }
+
+  .benefits-section p {
     font-size: 1rem;
   }
+}
 
-  .containerelements .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .containerelements img {
-    margin-bottom: 1rem;
-  }
+/* --- Accesibilidad y mejora UX --- */
+.btn:focus {
+  box-shadow: none;
+  outline: none;
 }

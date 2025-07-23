@@ -2,107 +2,164 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Repostería María Antonieta</title>
-  <link rel="stylesheet" href="estilospaginainicio.css"/>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="../componentes/nav-footer.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="estilospaginainicio.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-
 </head>
+
 <body>
+  <div id="navbar-container"></div>
 
-   <div id="nav-placeholder"></div>
+  <main>
+    <!-- Carrusel de productos -->
+    <section class="hero-carousel">
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 
-  <!-- seccion hero carrusel-->
-  <section class="hero">
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/paginadeinici/Fotos/carrusel1.png" class="d-block w-100" alt="Primer Slide">
-    </div>
-    <div class="carousel-item">
-      <img src="/paginadeinici/Fotos/carrusel2.png" class="d-block w-100" alt="Segunda Slide">
-    </div>
-    <div class="carousel-item">
-      <img src="/paginadeinici/Fotos/carrusel3.png" class="d-block w-100" alt="Cuarta Slide">
-    </div>
-  </div>
-</div>
-  </section>
-  <!-- seccion destacados -->
-<section class="destacados">
-  <h2>Destacados</h2>
-  <br>
-  <br>
-  <div class="productos">
-    <div class="producto">
-      <img src="/paginadeinici/Fotos/especial1.png" alt="Cheesecake">
-      <h3>Cheesecake Saludable</h3>
-      <p>$580.00</p>
-    </div>
-    <div class="producto">
-      <img src="/paginadeinici/Fotos/especial2.png" alt="Mostachon">
-      <h3>Mostachon</h3>
-      <p>$480</p>
-    </div>
-    <div class="producto">
-      <img src="/paginadeinici/Fotos/especial3.png" alt="Pastel de crepas">
-      <h3>Pastel de crepas</h3>
-      <p>$380</p>
-    </div>
-     <div class="producto">
-      <img src="/paginadeinici/Fotos/especial4.jpg" alt="Brazo gitano">
-      <h3>Brazo gitano petalos de rosas y fresas</h3>
-      <p>$390</p>
-    </div>
-  </div>
-  <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
-  <a href="../Lista de productos/productos.html"><button class="mi-boton" type="button" style="background-color: rgb(188, 157, 200);">Compra en línea</button></a>
-  </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/paginadeinici/Fotos/tartaPrueba.jpeg" class="d-block w-100 carousel-img-altura" alt="Pastel con fresas frescas.">
+            <div class="carousel-caption text-start">
+              <h2 class="display-5 fw-bold">Tartas</h2>
+              <p class="lead">Delicias hechas con amor y los mejores ingredientes naturales.</p>
+              <a href="../Lista de productos/productos.html" class="btn btn-lg px-5 py-3 fw-bold btn-primary-custom">Conoce nuestras tartas</a>
+            </div>
+          </div>
 
-</section>
+          <div class="carousel-item">
+            <img src="/paginadeinici/Fotos/pastelPrueba.jpeg" class="d-block w-100 carousel-img-altura" alt="Variedad de pasteles.">
+            <div class="carousel-caption text-start">
+              <h2 class="display-5 fw-bold">Pasteles</h2>
+              <p class="lead">Productos artesanales que deleitan a todos los sentidos.</p>
+              <a href="../Lista de productos/productos.html" class="btn btn-lg px-5 py-3 fw-bold btn-primary-custom">Conoce nuestros pasteles</a>
+            </div>
+          </div>
 
-  <!-- Beneficios, de recoge en tienda, ordena en linea y formas de pago-->
-  <section class="beneficios text-center">
-    <div class="containerelements">
-      <div class="row">
-        <div class="col-md-4"> <img src="/About-WorkTeam/Fotos/devices.png" alt="Dispositivos"> <br><p>| Ordena en línea </p>
-        <p>"Ordena fácil, disfruta Delicioso"</p></div>
-        <div class="col-md-4"> <img src="/About-WorkTeam/Fotos/cash.png"  alt="cash"> <img src="/About-WorkTeam/Fotos/arrow.png" alt="flecha"> <img src="/About-WorkTeam/Fotos/shp.png" alt="Tienda"><p>|| Paga y recoge</p>
-        <p>Los metodos de pago que aceptamos son:</p>
-        <ul>
-          <ol>Pago en efectivo</ol>
-          <ol>Pago con tarjeta</ol>
-          <ol>Transferencia bancaria</ol>
-          <ol>Pago en OXXO</ol>
-        </ul>
+          <div class="carousel-item">
+            <img src="/paginadeinici/Fotos/especialesPrueba.jpg" class="d-block w-100 carousel-img-altura" alt="Pastel de celebración.">
+            <div class="carousel-caption text-start">
+              <h2 class="display-5 fw-bold">Especiales</h2>
+              <p class="lead">Desde celebraciones especiales hasta un antojo en casa.</p>
+              <a href="../Lista de productos/productos.html" class="btn btn-lg px-5 py-3 fw-bold btn-primary-custom">Conoce nuestros especiales</a>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
       </div>
-        <div class="col-md-4" "> <img src="/About-WorkTeam/Fotos/cakelogo.png" alt="image cake"><p>||| Disfruta tu pastel</p>
-        <p>"Arte y sabor en cada pastel de María Antonieta"</p></div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="featured-products text-center py-5">
+      <h2 class="mb-4 display-5 fw-bold">¡Los favoritos en María Antonieta!</h2>
+
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- Repite esta estructura para cada producto -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="/paginadeinici/Fotos/especial1.png" class="card-img-top" alt="Cheesecake saludable.">
+              <div class="card-body"><h3 class="card-title">Cheesecake</h3></div>
+              <div class="card-footer bg-white border-0">
+                <a href="../Lista de productos/productos.html" class="btn w-100 btn-secondary-custom">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="/paginadeinici/Fotos/especial2.png" class="card-img-top" alt="Mostachón.">
+              <div class="card-body"><h3 class="card-title">Mostachón</h3></div>
+              <div class="card-footer bg-white border-0">
+                <a href="../Lista de productos/productos.html" class="btn w-100 btn-secondary-custom">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="/paginadeinici/Fotos/especial3.png" class="card-img-top" alt="Pastel de crepas.">
+              <div class="card-body"><h3 class="card-title">Pastel de Crepas</h3></div>
+              <div class="card-footer bg-white border-0">
+                <a href="../Lista de productos/productos.html" class="btn w-100 btn-secondary-custom">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="/paginadeinici/Fotos/especial4.jpg" class="card-img-top" alt="Brazo gitano.">
+              <div class="card-body"><h3 class="card-title">Brazo Gitano Rosas y Fresas</h3></div>
+              <div class="card-footer bg-white border-0">
+                <a href="../Lista de productos/productos.html" class="btn w-100 btn-secondary-custom">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-     <div id="footer-placeholder"></div>
- 
+    <!-- Botón de orden -->
+    <section class="order-button-section d-flex justify-content-center py-5">
+      <a href="../Lista de productos/productos.html" class="btn btn-lg px-5 py-3 fw-bold btn-order-cta">ORDENA AQUÍ</a>
+    </section>
 
-     <!--el script sirve para cargar automaticamente el navbar y footer-->
+    <!-- Beneficios -->
+    <section class="benefits-section text-center py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <img src="/About-WorkTeam/Fotos/devices.png" alt="Dispositivos" class="img-fluid benefit-icon">
+            <p class="mt-3 lead">Ordena en línea</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/About-WorkTeam/Fotos/cash.png" alt="Efectivo" class="img-fluid benefit-icon-small me-2">
+            <img src="/About-WorkTeam/Fotos/arrow.png" alt="Flecha" class="img-fluid benefit-icon-small me-2">
+            <img src="/About-WorkTeam/Fotos/shp.png" alt="Tienda" class="img-fluid benefit-icon-small">
+            <p class="mt-3 lead">Paga y recoge</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/About-WorkTeam/Fotos/cakelogo.png" alt="Pastel" class="img-fluid benefit-icon">
+            <p class="mt-3 lead">Disfruta tu pastel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {   // sirve para esperar a que todo el contenido html este cargado, ya que espera a que todo este cargado antes de ejecurtar el codigo
-      fetch("../componentes/header.html")   // pide el archivo header de la carpeta componentes 
-        .then(res => res.text())  // Convierte el contenido del archivo en texto para poder leerlo 
-        .then(data => document.getElementById("nav-placeholder").innerHTML = data); // Inserta ese texto dentro del elemento id nav-placeholder
+  <div id="footer-container"></div>
 
-      fetch("../componentes/footer.html")  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("../componentes/header.html")
         .then(res => res.text())
-        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        .then(data => document.getElementById("navbar-container").innerHTML = data)
+        .catch(error => console.error("Error al cargar el navbar:", error));
+
+      fetch("../componentes/footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data)
+        .catch(error => console.error("Error al cargar el footer:", error));
     });
   </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
