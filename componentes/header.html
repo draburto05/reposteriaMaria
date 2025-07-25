@@ -1,24 +1,31 @@
 
-<!--  enlaza el archivo de estilos CSS de Bootstrap -->
+</nav>
+<!-- Enlace a Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!--  funcionen cosas interactivas como el boton de menu en moviles -->
+<!-- Script para Bootstrap interactivo -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
     
-    <!-- logo principal de la reposteria-->
-    <a class="navbar-logo" href="../index.html">
-      <img src="../About-WorkTeam/Fotos/logoFondo-removebg-preview.png" alt="Logo" width="90" height="60">
-    </a>
+    <!-- Grupo: logo principal + nombre -->
+    <div class="d-flex align-items-center logo-brand-group">
+      <a class="navbar-logo" href="../index.html">
+        <img src="../About-WorkTeam/Fotos/LogoNav-removebg.png" alt="Logo" width="90" height="60">
+      </a>
+      <div class="brand-nombre">
+        <span class="d-block">Maria Antonieta</span>
+        <span class="d-block">REPOSTERIA CREATIVA</span>
+      </div>
+    </div>
 
-    <!-- Boton hamburguesa para los dispositivos como celulares-->
+    <!-- Botón hamburguesa para móviles -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- contenido del menu -->
+    <!-- Menú de navegación -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="../paginadeinici/paginadeinicio.html">Inicio</a></li>
@@ -29,7 +36,7 @@
       </ul>
     </div>
 
-    <!-- iconos derecha -->
+    <!-- Iconos de usuario y carrito -->
     <div class="iconos-usuario d-none d-lg-flex">
       <a href="https://www.google.com/">
         <img class="logo1" src="../About-WorkTeam/Fotos/user-svgrepo-com.png" alt="Perfil">
@@ -38,5 +45,7 @@
         <img class="logo1" src="../About-WorkTeam/Fotos/carrito.png" alt="Carrito">
       </a>
     </div>
-  </div>
+
+  </div> <!--Correcto de container-fluid -->
 </nav>
+
