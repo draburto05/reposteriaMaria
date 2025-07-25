@@ -89,7 +89,7 @@
   background-color: #e6d2ec;  /* color de fondo */
   padding: 20px 0; /* espacio arriba y abajo */
   margin-top: 20px;  /* separación del contenido */
-  text-align: center;  /* centra el texto */
+  text-align: center !important;  /* centra el texto */
   font-size: 1.1rem;   /* tamaño del texto */
   font-family: "Montserrat", sans-serif; /* fuente de letra */
   color: #421f52;
